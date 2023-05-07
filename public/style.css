@@ -1,0 +1,150 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+     width: 100%;
+     height: 100vh;
+     background: linear-gradient(180deg, rgb(237, 4, 86), darkblue);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+/* loader style rules */
+.loader{
+     width:100%;
+     height: 100vh;
+     position: fixed;
+     top:0;
+     left:0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: linear-gradient(180deg, rgb(237, 4, 86), darkblue);
+}
+
+.hide-loader{
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.loader::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border:10px solid rgba(255,255,255,0.5); 
+    border-top-color: white;
+    border-radius: 50%;
+    animation: loader infinite 0.75s ease;
+    /* animation-iteration-count: infinite;
+    animation-duration: 0.75s;
+    transition: .5s ease; */
+}
+
+@keyframes loader{
+      from{transform: rotate(1turn);}
+      to{
+            transform: rotate(3turn);
+      }
+}
+
+.container{
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     gap:20px;
+     padding: 20px;
+     background:transparent;
+
+}
+
+.container > * {
+   width: 100%;
+
+}
+
+.app-title{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color:rgba(255,255,255,0.8);
+    height: 8%;
+}
+
+.chat-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    height: 60%;
+    gap:5px;
+    border:1px solid white;
+
+}
+
+.chat-container p{
+    color:#333;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+
+
+.bottom{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap:10px;
+}
+
+.bottom > *{
+    width: 100%;
+}
+
+.handle{
+     padding: 10px;
+     border:1px solid whitesmoke;
+     outline: none;
+     font-size: 18px;
+
+}
+.message{
+    height: 50px;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+
+}
+
+
+.send-btn{
+    padding: 12px;
+    background-color: crimson;
+    color:white;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: .3s ease;
+
+}
+
+.send-btn:hover{
+    background: #666;
+}
+
+
+

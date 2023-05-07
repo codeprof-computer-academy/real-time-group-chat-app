@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codeprof Group Chat System</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- loading animation -->
+    <div class="loader"></div>
+    <div class="container">
+           <h1 class="app-title">Amebo</h1>
+           <div class="chat-container">
+
+           </div>
+           <div class="bottom">
+                <input type="text" class="handle" placeholder="handle">
+                <textarea class="message" placeholder="start typing"></textarea>
+                <button type="submit" class="send-btn">SEND</button>
+           </div>
+
+    </div>
+    
+
+
+    <!-- loader script -->
+    <script>
+            const loader = document.querySelector('.loader')
+
+            document.body.onload = ()=>{
+                 loader.classList.add('hide-loader')
+                 loader.addEventListener('transitionend', ()=>{
+                     document.body.removeChild(loader)
+                 })
+            }
+    </script>
+
+<!-- client socket script -->
+  <script src="./chat.js"></script>
+</body>
+</html>
